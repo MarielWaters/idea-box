@@ -1,7 +1,35 @@
 * {
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-section {
+  display: grid;
+  background-color: #E5F3F2;
+}
+
+.idea-side-of-header-title {
+  color: #00A79D;
+}
+
+.box-side-of-header-title {
+  color: #6D6E71;
+}
+
+.main-section-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea-card-list {
+  display: grid;
+  border: 3px solid red;
 }
 
 .card-buttons {
