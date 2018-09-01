@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card-buttons {
+  height: 1em;
+}
+
+.idea-card-title-and-delete-button {
+  display: inline-flex;
+}
