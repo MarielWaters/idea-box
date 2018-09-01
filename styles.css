@@ -5,13 +5,20 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 .main-section {
   display: grid;
   background-color: #E5F3F2;
+}
+
+h1 {
+  font-family: 'Roboto Slab';
+  font-size: 2.9em; 
+  margin-top: .5em;
+  margin-bottom: .25em;
 }
 
 .idea-side-of-header-title {
@@ -22,14 +29,41 @@ body {
   color: #6D6E71;
 }
 
+.input-fields {
+  border: 1.8px solid #B7B9BB;
+  font-size: 1.2em;
+  height: 1.8em;
+  margin-top: .9em;
+  width: 29em;
+  padding-left: .5em;
+}
+
+input::placeholder {
+  margin-top: 1em;
+  color: #B7B9BB;
+}
+
+.save-button {
+  background-color: #00A79D;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  width: 29.1em;
+  margin-bottom: 1.4em;
+  height: 1.9em;
+  margin-top: .9em;
+}
+
 .main-section-form {
   display: flex;
   flex-direction: column;
 }
 
+.input-search {
+  margin-top: 1.25em;
+}
+
 .idea-card-list {
   display: grid;
-  border: 3px solid red;
 }
 
 .card-buttons {
