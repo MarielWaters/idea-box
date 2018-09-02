@@ -2,6 +2,7 @@
 var saveButton = document.querySelector('.save-button');
 var inputSearch = document.querySelector('.input-search');
 
+
 saveButton.addEventListener('click', createIdeaCard);
 
 function createIdeaCard() {
@@ -9,7 +10,9 @@ function createIdeaCard() {
   var inputTitle = document.querySelector('.input-title');
   var inputBody = document.querySelector('.input-body');
   var ideaCardList = document.querySelector('.idea-card-list');
-  ideaCardList.innerHTML += `<form class="idea-card">
+  var newCardContainer = document.querySelector('.new-card-container');
+  var newCard = document.createElement('li');
+  newCard.innerHTML = `<form class="idea-card">
                             <span class="idea-card-title-and-delete-button">
                             <h2 class="idea-card-title">${inputTitle.value}</h2>
                             <img src="FEE-ideabox-icon-assets/delete.svg" class="card-buttons delete-button">
@@ -24,6 +27,7 @@ function createIdeaCard() {
                             </span>
                             <hr>
                             </form>`;
+  newCardContainer.prepend(newCard);
   inputTitle.value = '';
   inputBody.value = '';
-}
+};
