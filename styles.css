@@ -10,8 +10,10 @@ body {
 }
 
 .main-section {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: #E5F3F2;
+  width: 100%;
 }
 
 h1 {
@@ -19,6 +21,12 @@ h1 {
   font-size: 2.9em; 
   margin-top: .5em;
   margin-bottom: .25em;
+}
+
+.main-section-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .idea-side-of-header-title {
@@ -34,7 +42,7 @@ h1 {
   font-size: 1.2em;
   height: 1.8em;
   margin-top: .9em;
-  width: 29em;
+  width: 60%;
   padding-left: .5em;
 }
 
@@ -47,7 +55,7 @@ input::placeholder {
   background-color: #00A79D;
   color: #FFFFFF;
   font-size: 1.2em;
-  width: 29.1em;
+  width: 60%;
   margin-bottom: 1.4em;
   height: 1.9em;
   margin-top: .9em;
@@ -58,18 +66,72 @@ input::placeholder {
   flex-direction: column;
 }
 
+.idea-card-search-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-search {
   margin-top: 1.25em;
+
 }
 
-.idea-card-list {
-  display: grid;
-}
+.idea-card {
+  /*border: 3px dotted black;*/
+  width: 60%;
+  margin-top: 2em;
 
-.card-buttons {
-  height: 1em;
 }
 
 .idea-card-title-and-delete-button {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3%;
 }
+
+.idea-card-title {
+  color: #6D6E71;
+  margin: 0;
+}
+
+.delete-button {
+  margin: .15em 0 0 0;
+}
+
+.idea-card-text {
+  color: #939598;
+  line-height: 1.3em;
+  font-family: 'Open Sans';
+  overflow-y: scroll;
+  /*width: 99%;*/
+}
+
+.card-buttons {
+  height: 1.6em;
+}
+
+.vote-buttons-and-quality {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 1.2em;
+  width: 29%;
+}
+
+.upvote-button, .downvote-button {
+  margin: 0;
+}
+
+.quality {
+  color: #6D6E71;
+  margin: 0;
+}
+
+.quality-setting {
+  font-family: 'Open Sans';
+}
+
+hr {
+  margin-top: 1em;
+}
+
+
