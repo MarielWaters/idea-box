@@ -1,8 +1,10 @@
 
 var saveButton = document.querySelector('.save-button');
 var inputSearch = document.querySelector('.input-search');
+var newCardContainer = document.querySelector('.new-card-container');
 
 saveButton.addEventListener('click', createIdeaCard);
+newCardContainer.addEventListener('click', deleteCard);
 
 function createId() {
   return 'id-' + Math.random().toString(36).substr(2, 16);
@@ -13,7 +15,6 @@ function createIdeaCard() {
   var inputTitle = document.querySelector('.input-title');
   var inputBody = document.querySelector('.input-body');
   var ideaCardList = document.querySelector('.idea-card-list');
-  var newCardContainer = document.querySelector('.new-card-container');
   var uniqueId = createId();
   var newCard = document.createElement('li');
   newCard.innerHTML = `<form class="idea-card" data=${uniqueId}>
@@ -37,4 +38,11 @@ function createIdeaCard() {
   inputTitle.value = '';
   inputBody.value = '';
 };
+
+function deleteCard(event) {
+  if (event.target.classList.contains('delete-button')) {
+    event.target.closest('li').remove();
+  }
+};
+
 
