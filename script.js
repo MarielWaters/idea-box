@@ -5,9 +5,12 @@ var saveButton = document.querySelector('.save-button');
 var inputSearch = document.querySelector('.input-search');
 var newCardContainer = document.querySelector('.new-card-container');
 var newObject = {};
+var quality = 'swill';
 
 saveButton.addEventListener('click', buildCard);
 newCardContainer.addEventListener('click', deleteCard);
+// newCardContainer.addEventListener('click', upDownVote);
+newCardContainer.addEventListener('click', upVote);
 
 function createId() {
   return Math.random().toString(36).substr(2, 16);
@@ -63,8 +66,50 @@ function deleteCard(event) {
   }
 };
 
+// trying to figure out how to make this one work
+//this top function is a nested if else mess to change the quality. It doesnt work and it also 
+//doesnt throw errors 
+//you'll have to uncomment out the event listener for it and recomment 
+//the one for the below function 
+
+// function upDownVote(event) {
+//   if (event.target.classList.contains('upvote-button')) {
+//     if (event.target.innerHTML === 'swill') {
+//       console.log(event.target)
+//       event.target.innerHTML === 'plausible';
+//     } else {
+//       event.target.innerHTML === 'genius';
+//     }
+//   }
+//   if (event.target.classList.contains('downvote-button')){
+//     if (event.target.innerHTML === 'genius') {
+//       event.target.innerHTML === 'plausible';
+//     } else {
+//       event.target.innerHTML === 'swill';
+//     }
+//   }
+// };
+
+// this bottom function is the for loop which actually works but loops completely through the 
+//array and ends at genius yourl have to uncomment out the event listener for it and recomment 
+//the one for the above function we will also have to target each cards unique id so it doesnt
+//target only the top card youll see that if you create more than one card you can refresh the 
+//page and click on the upvote button on a card below the top card and it will change the quality 
+//on only the top card we will have to do this unique id thing on whatever function we create for 
+//this
+function upVote(event) {
+  if (event.target.classList.contains('upvote-button')) {
+    var qualityType = ['swill', 'plausible', 'genius'];
+    var qualitySetting = document.querySelector('.quality-setting')
+    for (var i = 0; i < qualityType.length; i++) {
+      qualitySetting.innerText = qualityType[i];
+    }
+  }
+};
+
+
+
 function store(uniqueId, inputTitle, inputBody) {
-  localStorage.setItem(uniqueId, JSON.stringify({title: inputTitle, body: inputBody}));
-}
+  localStorage.setItem(uniqueId, JSON.stringify({title: inputTitle, body: inputBody}));}
 
 fetchCard();
