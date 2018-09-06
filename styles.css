@@ -9,6 +9,9 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+
+/*form for creating ideas*/
+
 .main-section {
   background-color: #E5F3F2;
   display: flex;
@@ -66,6 +69,8 @@ input::placeholder {
   flex-direction: column;
 }
 
+/*search box*/
+
 .idea-card-search-form {
   display: flex;
   flex-direction: column;
@@ -74,6 +79,8 @@ input::placeholder {
 .input-search {
   margin-top: 1.25em;
 }
+
+/*cards */
 
 .idea-card {
   margin-top: 2em;
