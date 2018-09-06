@@ -10,15 +10,15 @@
 <body>
   <section class="main-section">
     <h1 class="idea-side-of-header-title">idea<span class="box-side-of-header-title">box</span></h1>
-    <form class="main-section-form">
-      <input type="text" name="title" placeholder="Title" class="input-fields input-title">
-      <input type="text" name="body" placeholder="Body" class="input-fields input-body">
-      <input type="submit" name="submit" value="save" class="save-button">
+    <form class="main-section-form" aria-label="create your ideas here">
+      <input type="text" name="title" placeholder="Title" class="input-fields input-title" aria-label="title of idea goes here">
+      <input type="text" name="body" placeholder="Body" class="input-fields input-body" aria-label="body of idea goes here">
+      <input type="submit" name="submit" value="save" class="save-button" aria-label="submit idea here">
     </form>
   </section>
-  <section class="idea-card-list">
+  <section class="idea-card-list" aria-label="saved ideas">
     <form class="idea-card-search-form">
-      <input type="text" name="search" placeholder="Search" class="input-fields input-search">
+      <input type="text" name="search" placeholder="Search" class="input-fields input-search" aria-label="search your saved ideas here">
     </form>
     <ul class="new-card-container">
     </ul>
