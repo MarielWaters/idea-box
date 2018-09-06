@@ -130,4 +130,11 @@ hr {
   margin-top: 1em;
 }
 
+@media screen and (max-width: 768px) {
+  
+  .main-section {
+    height: 50%;
+  }
+
+}
 
